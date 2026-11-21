@@ -1,0 +1,6 @@
+{
+  "name": "Prince Victoria's Best Furnitures",
+  "description": "Quality sofas, dining sets, beds, office furniture, and custom woodwork in Wukari, Taraba State. Located along Katsina-Ala Road, opposite Federal University Wukari exit gate.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

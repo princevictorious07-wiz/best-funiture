@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prince Victoria's Best Furnitures | Wukari, Taraba State</title>
+  <meta name="description" content="Quality sofas, dining sets, beds, office furniture, and custom woodwork in Wukari, Taraba State. Located along Katsina-Ala Road, opposite Federal University Wukari exit gate." />
+
+  <style>
+    /* ===========================
+       CSS VARIABLES & RESET
+    =========================== */
+    :root {
+      --bg-warm: #faf7f2;
+      --surface: #ffffff;
+      --surface-alt: #f2ece1;
+      --ink: #1f1a16;
+      --ink-muted: #5c5249;
+      --accent: #8c4a27;       /* Rich mahogany / timber */
+      --accent-dark: #6b3519;
+      --accent-light: #f5ebe3;
+      --gold: #c48b3f;
+      --border: #e5dccf;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(31, 26, 22, 0.08);
+      --transition: 0.25s ease;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-warm);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1140px, 92%);
+      margin: 0 auto;
+    }
+
+    /* ===========================
+       HEADER & NAVIGATION
+    =========================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 74px;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--accent-dark);
+    }
+
+    .brand-tag {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--ink);
+      transition: color var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.35rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: transform var(--transition), background-color var(--transition), box-shadow var(--transition);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(140, 74, 39, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--ink);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-alt);
+    }
+
+    .btn-whatsapp {
+      background: #1b8a4b;
+      color: #fff;
+    }
+
+    .btn-whatsapp:hover {
+      background: #156e3b;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    /* ===========================
+       HERO SECTION
+    =========================== */
+    .hero {
+      padding: 4.2rem 0 3.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      font-weight: 600;
+      font-size: 0.82rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      border: 1px solid #e7cbb6;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      margin-bottom: 1.75rem;
+      max-width: 58ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .highlight-item strong {
+      display: block;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .highlight-item span {
+      font-size: 0.84rem;
+      color: var(--ink-muted);
+    }
+
+    .hero-card {
+      background: linear-gradient(155deg, #3b2316 0%, #6b3519 60%, #8c4a27 100%);
+      color: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      right: -50px;
+      bottom: -50px;
+    }
+
+    .hero-card small {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #f3d6bc;
+      font-weight: 700;
+      font-size: 0.72rem;
+    }
+
+    .hero-card h2 {
+      font-size: 1.5rem;
+      margin: 0.4rem 0 1rem;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 0.7rem;
+      font-size: 0.95rem;
+      color: #f9efe6;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ===========================
+       SECTIONS & CATALOG
+    =========================== */
+    section {
+      padding: 3.8rem 0;
+    }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      letter-spacing: -0.02em;
+    }
+
+    .section-head p {
+      color: var(--ink-muted);
+      max-width: 52ch;
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      padding: 0.55rem 1.05rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(31, 26, 22, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-banner {
+      height: 150px;
+      background: linear-gradient(135deg, var(--surface-alt), #e6d6c1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .product-body {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-cat {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .product-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+    }
+
+    .product-desc {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+
+    .product-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .price {
+      font-weight: 800;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .btn-sm {
+      padding: 0.5rem 0.85rem;
+      font-size: 0.84rem;
+      border-radius: 8px;
+    }
+
+    /* ===========================
+       WHY CHOOSE US & LOCATION
+    =========================== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .feature-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+    }
+
+    .feature-box .icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .feature-box h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-box p {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+    }
+
+    .location-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .info-list {
+      list-style: none;
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .info-list li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .info-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    .quick-form {
+      background: var(--surface-alt);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .quick-form h3 {
+      margin-bottom: 0.4rem;
+      font-size: 1.2rem;
+    }
+
+    .quick-form p {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 0.9rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      border-radius: 9px;
+      border: 1px solid #d4c8b8;
+      background: #fff;
+      font-size: 0.92rem;
+      color: var(--ink);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: 2px solid var(--accent);
+      border-color: var(--accent);
+    }
+
+    .form-status {
+      margin-top: 0.75rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #156e3b;
+      min-height: 1.2em;
+    }
+
+    /* ===========================
+       FOOTER & FLOATING BAR
+    =========================== */
+    footer {
+      background: #1b1512;
+      color: #e7ddd3;
+      padding: 2.5rem 0;
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .footer-grid small {
+      color: #b7a89a;
+      display: block;
+      margin-top: 0.35rem;
+    }
+
+    /* ===========================
+       MODAL FOR CUSTOM INQUIRY
+    =========================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 15, 12, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      z-index: 200;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--surface);
+      border-radius: 16px;
+      width: min(480px, 100%);
+      padding: 1.75rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--surface-alt);
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    /* ===========================
+       RESPONSIVE BREAKPOINTS
+    =========================== */
+    @media (max-width: 860px) {
+      .hero-grid,
+      .location-card {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 1.25rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      nav ul.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-highlights {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <span class="brand-name">Prince Victoria's Best Furnitures</span>
+        <span class="brand-tag">Wukari, Taraba State</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</button>
+
+      <nav>
+        <ul id="navMenu">
+          <li><a href="#catalog">Furniture</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#location">Location & Contact</a></li>
+          <li><button class="btn btn-primary btn-sm" id="openInquiryBtn">Order / Inquire</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Katsina-Ala Road, Opposite FUW Exit Gate, Wukari</span>
+        <h1>Durable, Stylish Furniture Crafted for <span>Homes & Offices</span></h1>
+        <p>
+          At <strong>Prince Victoria's Best Furnitures</strong>, we build and supply comfortable sofas,
+          sturdy beds, dining sets, TV consoles, and office pieces made to last in Wukari and across Taraba State.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#catalog" class="btn btn-primary">Browse Furniture</a>
+          <a href="tel:08067711844" class="btn btn-secondary">Call 080-677-11844</a>
+          <a id="heroWhatsappLink" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp">Chat on WhatsApp</a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <strong>Custom Sizes</strong>
+            <span>Tailored to your room</span>
+          </div>
+          <div class="highlight-item">
+            <strong>Strong Timber</strong>
+            <span>Built for daily comfort</span>
+          </div>
+          <div class="highlight-item">
+            <strong>Easy Access</strong>
+            <span>Right by FUW Exit Gate</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <small>Showroom & Workshop</small>
+        <h2>Visit Us in Wukari</h2>
+        <ul>
+          <li><strong>Address:</strong> Along Katsina-Ala Road, Opposite Federal University Wukari Exit Gate, Wukari LGA, Taraba State</li>
+          <li><strong>Phone:</strong> <a href="tel:08067711844">080-677-11844</a></li>
+          <li><strong>Email:</strong> <a href="mailto:princevictorious07@gmail.com">princevictorious07@gmail.com</a></li>
+        </ul>
+        <button class="btn btn-secondary" style="width: 100%;" id="cardQuoteBtn">Request a Price Quote</button>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CATALOG SECTION -->
+  <section id="catalog">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Our Furniture Collection</h2>
+          <p>Filter by category and click "Order / Inquire" on any piece to ask about pricing, fabric/wood finish, or custom dimensions.</p>
+        </div>
+      </div>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-category="All">All Furniture</button>
+        <button class="filter-btn" data-category="Living Room">Living Room</button>
+        <button class="filter-btn" data-category="Bedroom">Bedroom</button>
+        <button class="filter-btn" data-category="Dining">Dining</button>
+        <button class="filter-btn" data-category="Office & Study">Office & Study</button>
+      </div>
+
+      <div class="catalog-grid" id="catalogGrid"></div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why-us" style="background: var(--surface-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Why Customers Choose Prince Victoria's Best Furnitures</h2>
+          <p>Practical craftsmanship, transparent communication, and convenient location in Wukari.</p>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="icon">🪵</div>
+          <h3>Solid Construction</h3>
+          <p>Well-joined frames and dependable upholstery designed for everyday family and office use.</p>
+        </div>
+        <div class="feature-box">
+          <div class="icon">📐</div>
+          <h3>Custom Orders</h3>
+          <p>Need a specific sofa length, bed size, or study desk for a student or staff apartment? We can build to fit.</p>
+        </div>
+        <div class="feature-box">
+          <div class="icon">📍</div>
+          <h3>Easy-to-Find Landmark</h3>
+          <p>Located along Katsina-Ala Road directly opposite the Federal University Wukari exit gate.</p>
+        </div>
+        <div class="feature-box">
+          <div class="icon">💬</div>
+          <h3>Direct Support</h3>
+          <p>Call, email, or message us on WhatsApp for quick availability checks and honest estimates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & CONTACT SECTION -->
+  <section id="location">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Visit or Contact Us</h2>
+          <p>Stop by our showroom in Wukari LGA or send a message directly using the form below.</p>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <div>
+          <h3>Business Details</h3>
+          <ul class="info-list">
+            <li>
+              <span class="info-label">Business Name</span>
+              <strong>Prince Victoria's Best Furnitures</strong>
+            </li>
+            <li>
+              <span class="info-label">Address</span>
+              <span>Along Katsina-Ala Road, Opposite Federal University, Wukari LGA, Exit Gate, Taraba State</span>
+            </li>
+            <li>
+              <span class="info-label">Phone Number</span>
+              <a href="tel:08067711844"><strong>080-677-11844</strong></a>
+            </li>
+            <li>
+              <span class="info-label">Email Address</span>
+              <a href="mailto:princevictorious07@gmail.com"><strong>princevictorious07@gmail.com</strong></a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="quick-form" id="contactForm">
+          <h3>Send an Inquiry</h3>
+          <p>Fill out your details and we will prepare a message you can send via Email or WhatsApp.</p>
+
+          <div class="form-group">
+            <label for="customerName">Your Name</label>
+            <input type="text" id="customerName" name="customerName" placeholder="e.g., Musa Danjuma" required />
+          </div>
+
+          <div class="form-group">
+            <label for="customerPhone">Phone / WhatsApp</label>
+            <input type="tel" id="customerPhone" name="customerPhone" placeholder="e.g., 080..." required />
+          </div>
+
+          <div class="form-group">
+            <label for="furnitureInterest">Furniture Needed</label>
+            <select id="furnitureInterest" name="furnitureInterest">
+              <option value="Living Room Sofa Set">Living Room Sofa Set</option>
+              <option value="Bedroom Bed & Wardrobes">Bedroom Bed & Wardrobes</option>
+              <option value="Dining Table & Chairs">Dining Table & Chairs</option>
+              <option value="Office / Study Furniture">Office / Study Furniture</option>
+              <option value="Custom Furniture Request">Custom Furniture Request</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="customerMessage">Message / Size / Color Notes</label>
+            <textarea id="customerMessage" name="customerMessage" rows="3" placeholder="Tell us what you need or when you plan to visit..."></textarea>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
+            <button type="submit" class="btn btn-primary" style="flex: 1;">Send via Email</button>
+            <button type="button" class="btn btn-whatsapp" id="formWhatsappBtn" style="flex: 1;">Send via WhatsApp</button>
+          </div>
+
+          <div class="form-status" id="formStatus" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Prince Victoria's Best Furnitures</strong>
+        <small>Along Katsina-Ala Road, Opposite Federal University, Wukari LGA, Exit Gate, Taraba State</small>
+        <small>Tel: 080-677-11844 &bull; Email: princevictorious07@gmail.com</small>
+      </div>
+      <div>
+        <small>&copy; <span id="year"></span> Prince Victoria's Best Furnitures. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ORDER / INQUIRY MODAL -->
+  <div class="modal-backdrop" id="inquiryModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal">&times;</button>
+      <h3 id="modalTitle">Order or Request Price</h3>
+      <p id="modalSubtitle" style="font-size: 0.9rem; color: var(--ink-muted); margin: 0.35rem 0 1rem;">
+        Tell us what item caught your eye and reach us right away.
+      </p>
+
+      <form id="modalForm">
+        <div class="form-group">
+          <label for="modalItem">Selected Item</label>
+          <input type="text" id="modalItem" required />
+        </div>
+        <div class="form-group">
+          <label for="modalName">Your Name</label>
+          <input type="text" id="modalName" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="modalNotes">Notes (Color, Quantity, or Delivery in Wukari)</label>
+          <textarea id="modalNotes" rows="3" placeholder="e.g., Need 1 set in brown/cream..."></textarea>
+        </div>
+        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+          <button type="button" class="btn btn-whatsapp" id="modalWhatsappBtn" style="flex: 1;">WhatsApp Inquiry</button>
+          <button type="submit" class="btn btn-primary" style="flex: 1;">Email Inquiry</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const BUSINESS = {
+      name: "Prince Victoria's Best Furnitures",
+      email: "princevictorious07@gmail.com",
+      displayPhone: "080-677-11844",
+      whatsappNumber: "2348067711844",
+      address: "Along Katsina-Ala Road, Opposite Federal University, Wukari LGA, Exit Gate, Taraba State"
+    };
+
+    const FURNITURE_ITEMS = [
+      {
+        id: 1,
+        name: "Royal Fabric Sofa Set",
+        category: "Living Room",
+        icon: "🛋️",
+        priceLabel: "Ask for Price",
+        description: "Plush cushions with a sturdy hardwood frame suited for family living rooms and guest lounges."
+      },
+      {
+        id: 2,
+        name: "Modern TV Console & Cabinet",
+        category: "Living Room",
+        icon: "📺",
+        priceLabel: "Ask for Price",
+        description: "Clean storage compartments for decoders, media boxes, and living room decor."
+      },
+      {
+        id: 3,
+        name: "Solid Wood Double & King Beds",
+        category: "Bedroom",
+        icon: "🛏️",
+        priceLabel: "Ask for Price",
+        description: "Stable, creak-free bed frames crafted for comfortable rest and long-term durability."
+      },
+      {
+        id: 4,
+        name: "Sliding & Hinged Wardrobes",
+        category: "Bedroom",
+        icon: "🚪",
+        priceLabel: "Ask for Price",
+        description: "Spacious hanging rails and shelves to keep clothes and personal items organized."
+      },
+      {
+        id: 5,
+        name: "Family Dining Table & Chairs",
+        category: "Dining",
+        icon: "🍽️",
+        priceLabel: "Ask for Price",
+        description: "Smooth-finished dining tables paired with comfortable chairs for shared meals."
+      },
+      {
+        id: 6,
+        name: "Executive Desk & Study Table",
+        category: "Office & Study",
+        icon: "💼",
+        priceLabel: "Ask for Price",
+        description: "Practical work surfaces with drawers for offices, lecturers, and students near FUW."
+      }
+    ];
+
+    const catalogGrid = document.getElementById("catalogGrid");
+    const filterBar = document.getElementById("filterBar");
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    const inquiryModal = document.getElementById("inquiryModal");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+    const openInquiryBtn = document.getElementById("openInquiryBtn");
+    const cardQuoteBtn = document.getElementById("cardQuoteBtn");
+    const modalItemInput = document.getElementById("modalItem");
+    const modalNameInput = document.getElementById("modalName");
+    const modalNotesInput = document.getElementById("modalNotes");
+    const modalForm = document.getElementById("modalForm");
+    const modalWhatsappBtn = document.getElementById("modalWhatsappBtn");
+    const contactForm = document.getElementById("contactForm");
+    const formWhatsappBtn = document.getElementById("formWhatsappBtn");
+    const formStatus = document.getElementById("formStatus");
+    const heroWhatsappLink = document.getElementById("heroWhatsappLink");
+
+    function buildWhatsAppUrl(messageText) {
+      return `https://wa.me/${BUSINESS.whatsappNumber}?text=${encodeURIComponent(messageText)}`;
+    }
+
+    function buildMailtoUrl(subject, body) {
+      return `mailto:${BUSINESS.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
+    // Set hero WhatsApp link
+    heroWhatsappLink.href = buildWhatsAppUrl(
+      `Hello ${BUSINESS.name}, I would like to inquire about furniture available in Wukari.`
+    );
+
+    // Render furniture cards
+    function renderCatalog(category = "All") {
+      const filtered = category === "All"
+        ? FURNITURE_ITEMS
+        : FURNITURE_ITEMS.filter(item => item.category === category);
+
+      catalogGrid.innerHTML = filtered.map(item => `
+        <article class="product-card">
+          <div>
+            <div class="product-banner" aria-hidden="true">${item.icon}</div>
+            <div class="product-body">
+              <span class="product-cat">${item.category}</span>
+              <h3 class="product-title">${item.name}</h3>
+              <p class="product-desc">${item.description}</p>
+              <div class="product-meta">
+                <span class="price">${item.priceLabel}</span>
+                <button class="btn btn-primary btn-sm inquire-item-btn" data-item="${item.name}">
+                  Order / Inquire
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      `).join("");
+
+      document.querySelectorAll(".inquire-item-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          openModal(btn.dataset.item);
+        });
+      });
+    }
+
+    // Category filter click
+    filterBar.addEventListener("click", (e) => {
+      const btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderCatalog(btn.dataset.category);
+    });
+
+    // Mobile nav toggle
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+    });
+
+    navMenu.querySelectorAll("a, button").forEach(el => {
+      el.addEventListener("click", () => navMenu.classList.remove("open"));
+    });
+
+    // Modal controls
+    function openModal(itemName = "Custom Furniture / Price Quote") {
+      modalItemInput.value = itemName;
+      inquiryModal.classList.add("open");
+      inquiryModal.setAttribute("aria-hidden", "false");
+      modalNameInput.focus();
+    }
+
+    function closeModal() {
+      inquiryModal.classList.remove("open");
+      inquiryModal.setAttribute("aria-hidden", "true");
+    }
+
+    openInquiryBtn.addEventListener("click", () => openModal());
+    cardQuoteBtn.addEventListener("click", () => openModal("Price Quote Request"));
+    closeModalBtn.addEventListener("click", closeModal);
+
+    inquiryModal.addEventListener("click", (e) => {
+      if (e.target === inquiryModal) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && inquiryModal.classList.contains("open")) {
+        closeModal();
+      }
+    });
+
+    // Modal actions
+    modalForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const item = modalItemInput.value.trim();
+      const name = modalNameInput.value.trim();
+      const notes = modalNotesInput.value.trim();
+
+      const body = [
+        `Hello ${BUSINESS.name},`,
+        ``,
+        `My name is ${name}. I would like to inquire about: ${item}.`,
+        notes ? `Notes: ${notes}` : "",
+        ``,
+        `Location reference: ${BUSINESS.address}`
+      ].filter(Boolean).join("\n");
+
+      window.location.href = buildMailtoUrl(`Furniture Inquiry: ${item}`, body);
+    });
+
+    modalWhatsappBtn.addEventListener("click", () => {
+      const item = modalItemInput.value.trim() || "Furniture";
+      const name = modalNameInput.value.trim() || "a customer";
+      const notes = modalNotesInput.value.trim();
+
+      const msg = [
+        `Hello ${BUSINESS.name}, I'm ${name}.`,
+        `I'm interested in: ${item}.`,
+        notes ? `Details: ${notes}` : ""
+      ].filter(Boolean).join(" ");
+
+      window.open(buildWhatsAppUrl(msg), "_blank", "noopener");
+    });
+
+    // Main contact form actions
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("customerName").value.trim();
+      const phone = document.getElementById("customerPhone").value.trim();
+      const interest = document.getElementById("furnitureInterest").value;
+      const message = document.getElementById("customerMessage").value.trim();
+
+      const body = [
+        `Name: ${name}`,
+        `Phone/WhatsApp: ${phone}`,
+        `Interest: ${interest}`,
+        `Message: ${message || "Please share available options and prices."}`
+      ].join("\n");
+
+      formStatus.textContent = "Opening your email app with your inquiry...";
+      window.location.href = buildMailtoUrl(`Website Inquiry - ${interest}`, body);
+    });
+
+    formWhatsappBtn.addEventListener("click", () => {
+      const name = document.getElementById("customerName").value.trim() || "Customer";
+      const phone = document.getElementById("customerPhone").value.trim();
+      const interest = document.getElementById("furnitureInterest").value;
+      const message = document.getElementById("customerMessage").value.trim();
+
+      const msg = [
+        `Hello ${BUSINESS.name}, my name is ${name}.`,
+        phone ? `Phone: ${phone}.` : "",
+        `I'm looking for: ${interest}.`,
+        message ? `Note: ${message}` : ""
+      ].filter(Boolean).join(" ");
+
+      formStatus.textContent = "Opening WhatsApp chat...";
+      window.open(buildWhatsAppUrl(msg), "_blank", "noopener");
+    });
+
+    // Footer year & initial render
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderCatalog("All");
+  </script>
+</body>
+</html>
